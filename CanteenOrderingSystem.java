@@ -5,8 +5,9 @@ public class CanteenOrderingSystem {
         Scanner scanner = new Scanner(System.in);
 
         // Menu Data
-        String[] menuItems = { "Burger", "Fries", "Hotdog", "Pizza", "Soda" };
-        double[] menuPrices = { 50.00, 30.00, 40.00, 120.00, 25.00 };
+        String[] menuItems = { "Takoyaki", "Spinach Pizza", "Shawarma", "Chicken Biryani", "Potato Mojos",
+                "Chicken Sisig" };
+        double[] menuPrices = { 129.00, 199.00, 79.00, 229.00, 179.00, 1091.00 };
 
         // Order Tracking Variables
         int totalQuantity = 0;
@@ -14,7 +15,7 @@ public class CanteenOrderingSystem {
 
         // Display Menu
         System.out.println("****************************************");
-        System.out.println("          CANTEEN MENU                  ");
+        System.out.println("         TINDAHAN NG MGA NAGLILIHI      ");
         System.out.println("****************************************");
         for (int i = 0; i < menuItems.length; i++) {
             System.out.printf("%d. %-10s $%.2f%n", (i + 1), menuItems[i], menuPrices[i]);
@@ -72,7 +73,7 @@ public class CanteenOrderingSystem {
             totalAmount += finalAmount;
 
             // Order Summary
-            System.out.println("\n✅ Order Placed!");
+            System.out.println("\n Order Placed!");
             System.out.printf("Item: %s  Qty: %d  Final:%.2f%n",
                     menuItems[itemNum - 1], qty, finalAmount);
 
@@ -82,7 +83,7 @@ public class CanteenOrderingSystem {
 
         } while (orderAgain == 'Y');
 
-        // ========== FINAL RECEIPT — WALANG x: DITO! ==========
+        // Final Receipt
         System.out.println("****************************************");
         System.out.println("            FINAL RECEIPT               ");
         System.out.println("****************************************");
